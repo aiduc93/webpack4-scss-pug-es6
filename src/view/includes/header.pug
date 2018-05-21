@@ -1,0 +1,13 @@
+doctype html
+head
+  include includes/head.pug
+  //- Include CSS before closing head tag
+  each css in htmlWebpackPlugin.files.css
+    link(href=css, rel='stylesheet')
+body
+  block content
+  
+  include includes/foot.pug
+  //- Include JS before closing body tag
+  each js in htmlWebpackPlugin.files.js
+    script(type='text/javascript', src=js)
