@@ -11,8 +11,11 @@ html(lang="en")
         p You are amazing
       else
         p Get on it!
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features
+      p(data-show).
+        Show Item <-- Click me
+      p(data-hide).
+        Hide Item <-- Click me
+      p(data-zxc).
+        Hide Item <-- Click me
     script(type='text/javascript', src='main.js')
-    script( src='{<%= htmlWebpackPlugin.files.chunks.main.entry %>}' )
+    //- script( src='#{<%= htmlWebpackPlugin.files.chunks.main.entry %>}' )
